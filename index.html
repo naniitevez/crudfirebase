@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>CRUD con Firebase!</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Agregar usuarios!</h1>
+        <form id="formId">
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="mb-3">
+                <label for="surnameInput" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="surnameInput" placeholder="Ingresa tu apellido">
+            </div>
+            <div class="mb-3">
+                <label for="bornYearInput" class="form-label">Año de nacimiento</label>
+                <input type="number" class="form-control" id="bornYearInput" placeholder="Ingresa el año de tu nacimiento">
+            </div>
+        </form>
+        <button type="button" class="btn btn-info" id="saveButton">Guardar</button>
+    </div>
+    <div class="container mt-4">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Año de nacimiento</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
